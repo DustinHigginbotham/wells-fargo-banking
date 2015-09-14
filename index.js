@@ -65,3 +65,26 @@ WellsFargo.prototype.startCallingObsessively = function() {
 WellsFargo.prototype.withDrawAmountFromUser = function(user, amount) {
     // ...
 };
+
+WellsFargo.CustomerService = function() {
+    // ...
+};
+
+WellsFargo.CustomerService.prototype.didWeSayWeFixedProblems = function() {
+    return true;
+};
+
+WellsFargo.CustomerService.prototype.didWeActuallyFixProblems = function() {
+    return false;
+};
+
+WellsFargo.DebitCard = function(customer) {
+    this.customer = customer;
+};
+WellsFargo.DebitCard.prototype.charge = function(amount) {
+    if (this.customer.doTheyNeedThisPurchase) {
+        return false;
+    }
+
+    return false; // Fuck it, return false anyway.
+};
